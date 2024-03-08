@@ -1,4 +1,4 @@
-// Import Express.js, path, and file system.
+// Imports Express.js, path, and file system.
 const express = require("express");
 const path = require("path");
 const fs = require("fs");
@@ -6,6 +6,9 @@ const fs = require("fs");
 // Initialize an instance of Express.js and specify which port the server will run on.
 const app = express();
 const PORT = 3001;
+
+// Imports json notes for future use.
+const notes = require("./db/db.json");
 
 // Static middleware pointing to the public folder.
 app.use(express.static("public"));
@@ -17,6 +20,9 @@ app.get("/", (req, res) =>
 app.get("/notes", (req, res) =>
   res.sendFile(path.join(__dirname, "public/notes.html"))
 );
+
+// Gets the content of the json notes.
+app.get("/api/notes", (req, res) => res.json(notes));
 
 // listen() method is responsible for listening for incoming connections on the specified port.
 app.listen(PORT, () =>
