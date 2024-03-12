@@ -11,7 +11,7 @@ uuid = () =>
 
 // Initialize an instance of Express.js and specify which port the server will run on.
 const app = express();
-const PORT = 3001;
+const port = process.env.PORT || 3001;
 
 // Imports json notes for future use.
 const notes = require("./db/db.json");
@@ -77,6 +77,6 @@ app.delete("/api/notes/:id", (req, res) => {
 });
 
 // listen() method is responsible for listening for incoming connections on the specified port.
-app.listen(PORT, () =>
-  console.log(`App listening at http://localhost:${PORT}`)
+app.listen(port, () =>
+  console.log(`App listening at http://localhost:${port}`)
 );
