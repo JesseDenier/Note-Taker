@@ -17,12 +17,12 @@ This is a website that allows users to create and delete notes. The notes are sa
 
 ## Installation
 
-No installation is necessary, simply visit yyy.com on any device with internet access.
+No installation is necessary, simply visit https://jesse-denier-note-taker-a687acd57a68.herokuapp.com/ on any device with internet access.
 
 ## Usage
 
 ![Screenshot of website with 3 notes visible](assets/imgs/Screenshot.png)
-To access this website vist yyy.com.
+To access this website vist https://jesse-denier-note-taker-a687acd57a68.herokuapp.com/.
 To add a note type over "Note Title" and "Note Text" then click the "Save Note" button in the top right.
 To delete a note click the red trashcan next to the Note Title on the left side.
 To view a note click on the Note Title on the left side.
